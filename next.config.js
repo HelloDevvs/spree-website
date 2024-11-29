@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-// const withTM = require('next-transpile-modules')(['@babel/preset-react']);
-//   '@fullcalendar/common',
+// const withTM = require('next-transpile-modules')([
+//   '@babel/preset-react',
 //   '@fullcalendar/common',
 //   '@fullcalendar/daygrid',
 //   '@fullcalendar/interaction',
 //   '@fullcalendar/react',
+// ]);
 
 const nextConfig = {
   swcMinify: true,
@@ -20,8 +21,9 @@ const nextConfig = {
     // Make ENV
     unoptimized: true,
   },
+  // Remove 'appDir' from the experimental section
   experimental: {
-    appDir: true,
+    // appDir: true,  // Removed this line
   },
 };
 
